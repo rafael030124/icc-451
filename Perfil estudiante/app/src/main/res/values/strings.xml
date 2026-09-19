@@ -2,9 +2,9 @@
     <string name="app_name">Perfil de Estudiante</string>
 
     <string name="label_nombre">Nombre</string>
-    <string name="hint_nombre">Ej. Juan Pérez</string>
+    <string name="hint_nombre">Ej. Juan Perez</string>
     <string name="label_matricula">Matrícula</string>
-    <string name="hint_matricula">Ej. 2024-00123</string>
+    <string name="hint_matricula">Ej. 2024-8945</string>
     <string name="label_carrera">Carrera</string>
     <string name="carrera_placeholder">Selecciona tu carrera</string>
     <string name="btn_guardar">Guardar</string>
@@ -14,6 +14,7 @@
     <string name="error_matricula">La matrícula es obligatoria</string>
     <string name="error_carrera">La carrera es obligatoria</string>
 
+    <string name="saludo">¡Hola, %1$s!</string>
     <string name="resumen_intro">Aquí está tu información:</string>
     <string name="resumen_nombre">Nombre:</string>
     <string name="resumen_matricula">Matrícula:</string>
