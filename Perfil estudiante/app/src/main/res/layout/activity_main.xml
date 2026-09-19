@@ -61,7 +61,8 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_matricula"
                 android:importantForAutofill="no"
-                android:inputType="text"
+                android:inputType="phone"
+                android:maxLength="9"
                 android:maxLines="1"
                 android:minHeight="48dp" />
 
@@ -97,7 +98,6 @@
                 android:text="@string/btn_guardar" />
         </LinearLayout>
 
-        <!-- ============ RESUMEN (oculto al inicio) ============ -->
         <LinearLayout
             android:id="@+id/layoutResumen"
             android:layout_width="match_parent"

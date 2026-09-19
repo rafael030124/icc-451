@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
@@ -24,6 +26,35 @@ public class MainActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         binding.cmbCareer.setAdapter(adapter);
 
+        binding.txtID.addTextChangedListener(new TextWatcher() {
+            private boolean formatting = false;
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (formatting) {
+                    return;
+                }
+                formatting = true;
+                String digits = s.toString().replaceAll("\\D", "");
+                if (digits.length() > 8) {
+                    digits = digits.substring(0, 8);
+                }
+                String formatted = digits.length() > 4
+                        ? digits.substring(0, 4) + "-" + digits.substring(4)
+                        : digits;
+                s.replace(0, s.length(), formatted);
+                formatting = false;
+            }
+        });
+
         binding.btnSave.setOnClickListener(v -> validationAndSave());
         binding.btnEdit.setOnClickListener(v -> showForm());
     }
@@ -31,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
     private void validationAndSave() {
         String name = binding.txtName.getText().toString().trim();
         String id = binding.txtID.getText().toString().trim();
-        boolean careerEmpty = binding.cmbCareer.getSelectedItemPosition() == 0;
 
         boolean valid = true;
 
@@ -42,7 +72,11 @@ public class MainActivity extends AppCompatActivity {
         if (id.isEmpty()) {
             binding.txtID.setError(getString(R.string.error_matricula));
             valid = false;
+        } else if (id.length() < 9) {
+            binding.txtID.setError(getString(R.string.error_matricula_formato));
+            valid = false;
         }
+        boolean careerEmpty = binding.cmbCareer.getSelectedItemPosition() == 0;
         binding.tvErrorCarrera.setVisibility(careerEmpty ? View.VISIBLE : View.GONE);
         if (careerEmpty) {
             valid = false;
