@@ -13,7 +13,7 @@
         android:padding="20dp">
 
         <LinearLayout
-            android:id="@+id/layoutFormulario"
+            android:id="@+id/layoutForm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -26,7 +26,7 @@
                 android:layout_marginBottom="24dp"
                 android:contentDescription="@null"
                 android:src="@drawable/ic_account_box"
-                app:tint="#9E9E9E" />
+                app:tint="@color/avatar_gray" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -81,11 +81,11 @@
                 android:layout_height="52dp" />
 
             <TextView
-                android:id="@+id/tvErrorCarrera"
+                android:id="@+id/tvCareerError"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/error_carrera"
-                android:textColor="#D32F2F"
+                android:textColor="@color/error_red"
                 android:textSize="12sp"
                 android:visibility="gone" />
 
@@ -99,7 +99,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/layoutResumen"
+            android:id="@+id/layoutSummary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -109,7 +109,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#E8F5E9"
+                android:background="@color/success_green_light"
                 android:orientation="vertical"
                 android:padding="20dp">
 
@@ -119,10 +119,10 @@
                     android:layout_gravity="center_horizontal"
                     android:contentDescription="@null"
                     android:src="@drawable/ic_account_box"
-                    app:tint="#43A047" />
+                    app:tint="@color/success_green" />
 
                 <TextView
-                    android:id="@+id/tvSaludo"
+                    android:id="@+id/tvGreeting"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -148,7 +148,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/tvNombre"
+                    android:id="@+id/tvName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
@@ -162,7 +162,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/tvMatricula"
+                    android:id="@+id/tvId"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
@@ -176,7 +176,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/tvCarrera"
+                    android:id="@+id/tvCareer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black" />

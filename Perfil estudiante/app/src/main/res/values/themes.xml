@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.MyApplication" parent="Theme.Material3.Light.NoActionBar">
+    <style name="Theme.PerfilEstudiante" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/blue_primary</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="android:statusBarColor">@color/background</item>

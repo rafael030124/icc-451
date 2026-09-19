@@ -4,4 +4,8 @@
     <color name="background">#FFFFFBFE</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="avatar_gray">#FF9E9E9E</color>
+    <color name="error_red">#FFD32F2F</color>
+    <color name="success_green_light">#FFE8F5E9</color>
+    <color name="success_green">#FF43A047</color>
 </resources>

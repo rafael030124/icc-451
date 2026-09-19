@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.perfilestudiante;
 
 import android.os.Bundle;
 import android.text.Editable;
@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.myapplication.databinding.ActivityMainBinding;
+import com.example.perfilestudiante.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             valid = false;
         }
         boolean careerEmpty = binding.cmbCareer.getSelectedItemPosition() == 0;
-        binding.tvErrorCarrera.setVisibility(careerEmpty ? View.VISIBLE : View.GONE);
+        binding.tvCareerError.setVisibility(careerEmpty ? View.VISIBLE : View.GONE);
         if (careerEmpty) {
             valid = false;
         }
@@ -92,16 +92,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showSummary(String name, String id, String career) {
-        binding.tvSaludo.setText(getString(R.string.saludo, name));
-        binding.tvNombre.setText(name);
-        binding.tvMatricula.setText(id);
-        binding.tvCarrera.setText(career);
-        binding.layoutFormulario.setVisibility(View.GONE);
-        binding.layoutResumen.setVisibility(View.VISIBLE);
+        binding.tvGreeting.setText(getString(R.string.saludo, name));
+        binding.tvName.setText(name);
+        binding.tvId.setText(id);
+        binding.tvCareer.setText(career);
+        binding.layoutForm.setVisibility(View.GONE);
+        binding.layoutSummary.setVisibility(View.VISIBLE);
     }
 
     private void showForm() {
-        binding.layoutResumen.setVisibility(View.GONE);
-        binding.layoutFormulario.setVisibility(View.VISIBLE);
+        binding.layoutSummary.setVisibility(View.GONE);
+        binding.layoutForm.setVisibility(View.VISIBLE);
     }
 }
